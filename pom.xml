@@ -22,19 +22,31 @@
     </repository>
   </repositories>
 
-  <dependencies>
+ <dependencies>
+    <!-- Existing Dependency -->
     <dependency>
-      <groupId>com.example.dep</groupId>
-      <artifactId>simple-maven-dep</artifactId>
-      <version>1.0</version>
+        <groupId>com.example.dep</groupId>
+        <artifactId>simple-maven-dep</artifactId>
+        <version>1.0</version>
     </dependency>
+
+    <!-- JUnit for Testing -->
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>3.8.1</version>
+        <scope>test</scope>
     </dependency>
-  </dependencies>
+
+    <!-- Servlet API (Tomcat provides it, so 'provided' scope is used) -->
+    <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>4.0.1</version>
+        <scope>provided</scope>
+    </dependency>
+</dependencies>
+
 
  <build>
   <plugins>
